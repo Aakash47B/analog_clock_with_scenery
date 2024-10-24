@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Analog Clock with Scenery</title>
+   <link rel="stylesheet" href="analog_clock_style.css">
+</head>
+<body>   
+   <div class="card">
+      <div class="clock" id="clock">
+         <div class="hand hour" id="hourHand"></div>
+         <div class="hand minute" id="minuteHand"></div>
+         <div class="hand second" id="secondHand"></div>
+      </div>
+
+      <div class="scenery" id="scenery"></div>
+      
+      <div class="mode-buttons">
+         <button id="autoButton">Auto Time</button>
+         <button id="manualButton">Manual Time</button>
+      </div>
+   </div>
+
+   <!-- Popup for manual time -->
+   <div class="popup-overlay" id="popupOverlay"></div>
+      <div class="popup" id="timePopup">
+      <h3>Set Time</h3>
+      <div>
+         <label for="hours">Hours (0-23):</label>
+         <input type="number" id="hours" min="0" max="23" value="12"><br>
+
+         <label for="minutes">Minutes (0-59):</label>
+         <input type="number" id="minutes" min="0" max="59" value="0"><br>
+      </div>
+      <div>
+         <button id="setTimeButton">Set Time</button>
+         <button class="close-button" id="closePopup">Close</button>
+      </div>
+   </div>
+   <script src="analog_clock_javascript.js"></script>
+</body>
+</html>
